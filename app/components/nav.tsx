@@ -1,26 +1,33 @@
 import Link from 'next/link'
 
 const navItems = {
-  '/': {
-    name: 'home',
-  },
   '/blog': {
     name: 'blog',
   },
-  'https://vercel.com/templates/next.js/portfolio-starter-kit': {
-    name: 'deploy',
+
+  '/photos': {
+    name: 'photos',
+  },  
+  '/contact': {
+    name: 'contact',
   },
 }
 
 export function Navbar() {
   return (
-    <aside className="-ml-[8px] mb-16 tracking-tight">
+    <aside className="-ml-[8px] mb-2 tracking-tight">
       <div className="lg:sticky lg:top-20">
+
+        
         <nav
-          className="flex flex-row items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
+          className="flex flex-row items-start relative align-middle px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative mb-4"
           id="nav"
         >
-          <div className="flex flex-row space-x-0 pr-10">
+
+      <h1 className="text-2xl pt-0.5 pr-5 font-semibold">
+        matgilbert.com
+      </h1>
+          <div className="flex flex-row flex-row-reverse space-x-0 items-baseline grow">
             {Object.entries(navItems).map(([path, { name }]) => {
               return (
                 <Link
